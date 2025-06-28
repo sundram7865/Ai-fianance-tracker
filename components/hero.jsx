@@ -1,6 +1,6 @@
 "use client";
 
-import  {React, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -27,31 +27,36 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="pt-40 pb-20 px-4">
-      <div className="container mx-auto text-center">
-        <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 gradient-title">
-        Smarter Financial Control <br />
+    <section className="pt-24 pb-16 px-4 md:px-8 bg-white">
+      <div className="container mx-auto flex flex-col items-center text-center space-y-6">
+        {/* Heading */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight gradient-title">
+          Master Your Money with AI Precision
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-         An AI-driven financial management platform that empowers you 
-         to track, analyze, and optimize your spending with real-time insights and intelligent recommendations.
+
+        {/* Subheading */}
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl">
+          Real-time insights that help you spend smarter, save better, and stay in control.
+
+
         </p>
-        <div className="flex justify-center space-x-4">
-          <Link href="/dashboard">
-            <Button size="lg" className="px-8">
-              Get Started
-            </Button>
-          </Link>
-       
-        </div>
-        <div className="hero-image-wrapper mt-5 md:mt-0">
+
+        {/* CTA Button */}
+        <Link href="/dashboard">
+          <Button size="lg" className="px-8 py-5 text-lg">
+            Get Started
+          </Button>
+        </Link>
+
+        {/* Image */}
+        <div className="hero-image-wrapper mt-10 w-full max-w-6xl px-4">
           <div ref={imageRef} className="hero-image">
             <Image
-              src="/banner.jpeg"
-              width={1280}
-              height={720}
+              src="/banner.png"
+              width={1200}
+              height={180}
               alt="Dashboard Preview"
-              className="rounded-lg shadow-2xl border mx-auto"
+              className="rounded-xl shadow-2xl border object-cover w-full h-auto"
               priority
             />
           </div>
