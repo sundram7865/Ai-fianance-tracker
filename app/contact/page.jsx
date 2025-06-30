@@ -3,7 +3,7 @@ import { Mail, Twitter, Facebook, Linkedin, Instagram } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="bg-gradient-to-r from-indigo-500 to-blue-600 min-h-screen py-16 px-4">
+    <div className="bg-gradient-to-r from-indigo-500 to-blue-600 min-h-screen py-40 px-4">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
         <h1 className="text-4xl font-bold text-indigo-700 mb-4">Contact us</h1>
         <p className="text-gray-600 mb-8 text-lg">
