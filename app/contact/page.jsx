@@ -29,7 +29,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 py-20 px-4 flex flex-col items-center justify-center">
+    <section className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 py-40 px-4 flex flex-col items-center justify-center">
       <div className="text-center text-white mb-10">
         <h1 className="text-4xl font-bold">Contact Us</h1>
         <p className="text-lg mt-2 max-w-xl mx-auto">

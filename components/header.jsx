@@ -13,14 +13,15 @@ const Header = async () => {
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/">
-          <Image
-            src={"/Fintrack.png.png"}
-            alt="FinTrack Logo"
-            width={200}
-            height={60}
-            className="h-12 w-auto object-contain px-5"
-          />
-        </Link>
+  <Image
+    src={"/fintrack.png"}
+    alt="FinTrack Logo"
+    width={240}           // Increased width
+    height={72}           // Increased height
+    className="h-16 w-auto object-contain px-5"  // Increased height from h-12 to h-16
+  />
+</Link>
+
 
         {/* Navigation Links - Different for signed in/out users */}
         <div className="hidden md:flex items-center space-x-8">
