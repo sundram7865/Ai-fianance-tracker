@@ -1,86 +1,87 @@
-import React from "react";
-import { Mail, Twitter, Facebook, Linkedin, Instagram } from "lucide-react";
+"use client"
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-export default function ContactPage() {
+const ContactPage = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setIsSent(true);
+          form.current.reset();
+          console.log("Message sent successfully!");
+        },
+        (error) => {
+          console.error("Error sending message:", error);
+        }
+      );
+  };
+
   return (
-    <div className="bg-gradient-to-r from-indigo-500 to-blue-600 min-h-screen py-40 px-4">
-      <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
-        <h1 className="text-4xl font-bold text-indigo-700 mb-4">Contact us</h1>
-        <p className="text-gray-600 mb-8 text-lg">
-          Let&apos;s talk about your financial goals. Send us a message and we&apos;ll get back to you within one business day.
+    <section className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 py-20 px-4 flex flex-col items-center justify-center">
+      <div className="text-center text-white mb-10">
+        <h1 className="text-4xl font-bold">Contact Us</h1>
+        <p className="text-lg mt-2 max-w-xl mx-auto">
+          Let’s talk about your project or questions. I’ll respond as soon as possible!
         </p>
-
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Contact Form */}
-          <form className="flex-1 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="text-sm font-semibold text-gray-700">Name</label>
-                <input
-                  type="text"
-                  placeholder="Full name"
-                  className="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-              <div>
-                <label className="text-sm font-semibold text-gray-700">Email</label>
-                <input
-                  type="email"
-                  placeholder="name@example.com"
-                  className="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="text-sm font-semibold text-gray-700">Message</label>
-              <textarea
-                rows="5"
-                placeholder="Write your message..."
-                className="mt-1 w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="bg-indigo-600 text-white px-6 py-2 rounded font-semibold hover:bg-indigo-700 transition"
-            >
-              Submit
-            </button>
-          </form>
-
-          {/* Contact Info */}
-          <div className="bg-gray-50 rounded-lg shadow-sm p-6 w-full md:max-w-sm space-y-4 text-sm text-gray-600">
-            <p className="font-semibold">contact@fintrack.com</p>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <Twitter className="w-4 h-4 text-blue-500" />
-                <a href="https://twitter.com" className="hover:underline">Twitter</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Facebook className="w-4 h-4 text-blue-600" />
-                <a href="https://facebook.com" className="hover:underline">Facebook</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Linkedin className="w-4 h-4 text-blue-700" />
-                <a href="https://linkedin.com" className="hover:underline">LinkedIn</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Instagram className="w-4 h-4 text-pink-500" />
-                <a href="https://instagram.com" className="hover:underline">Instagram</a>
-              </div>
-            </div>
-
-            <p className="text-xs mt-4">
-              Already using FinTrack?{" "}
-              <a href="/dashboard" className="text-indigo-600 underline">
-                Go to your dashboard
-              </a>
-              .
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
+
+      <div className="w-full max-w-xl bg-[#0d081f] p-8 rounded-lg shadow-lg border border-gray-700">
+        <h3 className="text-xl font-semibold text-white text-center mb-4">
+          Send a Message <span className="ml-1">🚀</span>
+        </h3>
+
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4">
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
   );
-}
+};
+
+export default ContactPage;
