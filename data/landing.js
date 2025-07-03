@@ -7,105 +7,116 @@ import {
   Zap,
 } from "lucide-react";
 
-// Stats Data
+// 📊 Stats Data
 export const statsData = [
   {
     value: "50K+",
-    label: "Active Users",
+    label: "Trusted Users Worldwide",
   },
   {
     value: "$2B+",
-    label: "Transactions Tracked",
+    label: "Transactions Managed Securely",
   },
   {
     value: "99.9%",
-    label: "Uptime",
+    label: "System Uptime Guarantee",
   },
   {
     value: "4.9/5",
-    label: "User Rating",
+    label: "Average User Satisfaction",
   },
 ];
 
-// Features Data
+// 🚀 Features Data
 export const featuresData = [
   {
     icon: <BarChart3 className="h-8 w-8 text-blue-600" />,
-    title: "Advanced Analytics",
+    title: "Real-Time Analytics",
     description:
-      "Get detailed insights into your spending patterns with AI-powered analytics",
+      "Visualize your financial health instantly with dynamic charts and trends.",
   },
   {
     icon: <Receipt className="h-8 w-8 text-blue-600" />,
-    title: "Smart Receipt Scanner",
+    title: "AI Receipt Scanner",
     description:
-      "Extract data automatically from receipts using advanced AI technology",
+      "Snap, scan, and store receipts with zero manual effort.",
   },
   {
     icon: <PieChart className="h-8 w-8 text-blue-600" />,
-    title: "Budget Planning",
-    description: "Create and manage budgets with intelligent recommendations",
+    title: "Smart Budget Planning",
+    description:
+      "Set financial goals with intelligent, personalized recommendations.",
   },
   {
     icon: <CreditCard className="h-8 w-8 text-blue-600" />,
-    title: "Multi-Account Support",
-    description: "Manage multiple accounts and credit cards in one place",
+    title: "Unified Wallet",
+    description:
+      "Connect and control all your cards and accounts from one dashboard.",
   },
   {
     icon: <Globe className="h-8 w-8 text-blue-600" />,
-    title: "Multi-Currency",
-    description: "Support for multiple currencies with real-time conversion",
+    title: "Multi-Currency Support",
+    description:
+      "Track and convert across currencies — perfect for global users.",
   },
   {
     icon: <Zap className="h-8 w-8 text-blue-600" />,
-    title: "Automated Insights",
-    description: "Get automated financial insights and recommendations",
+    title: "AI Insights",
+    description:
+      "Get personalized financial tips and proactive alerts — automatically.",
   },
 ];
 
-// How It Works Data
+// 🛠️ How It Works
 export const howItWorksData = [
   {
     icon: <CreditCard className="h-8 w-8 text-blue-600" />,
-    title: "1. Create Your Account",
+    title: "1. Sign Up",
     description:
-      "Get started in minutes with our simple and secure sign-up process",
+      "Create your secure FinTrack account in under a minute.",
   },
   {
     icon: <BarChart3 className="h-8 w-8 text-blue-600" />,
-    title: "2. Track Your Spending",
+    title: "2. Connect & Track",
     description:
-      "Automatically categorize and track your transactions in real-time",
+      "Link your accounts and let us auto-track your transactions.",
   },
   {
     icon: <PieChart className="h-8 w-8 text-blue-600" />,
-    title: "3. Get Insights",
+    title: "3. Optimize",
     description:
-      "Receive AI-powered insights and recommendations to optimize your finances",
+      "Receive AI-driven advice to reduce spending and grow savings.",
   },
 ];
 
-// Testimonials Data
+// ❤️ Testimonials
 export const testimonialsData = [
   {
     name: "Sarah Johnson",
-    role: "Small Business Owner",
+    role: "Founder, Blossom Boutique",
     image: "https://randomuser.me/api/portraits/women/75.jpg",
     quote:
-      "FinTrack has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
+      "FinTrack helped me cut monthly expenses by 30%. I can now focus more on growing my business.",
   },
   {
     name: "Michael Chen",
-    role: "Freelancer",
+    role: "Freelance Developer",
     image: "https://randomuser.me/api/portraits/men/75.jpg",
     quote:
-      "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
+      "Tracking finances used to be painful. Now it's seamless — FinTrack is my silent business partner.",
   },
   {
     name: "Emily Rodriguez",
-    role: "Financial Advisor",
+    role: "Global Wealth Manager",
     image: "https://randomuser.me/api/portraits/women/74.jpg",
     quote:
-      "I recommend FinTrack to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
+      "My international clients love the multi-currency support. It's become an essential tool in my advisory kit.",
   },
 ];
+
+// ✅ Optional: CTA Section
+export const callToAction = {
+  headline: "Ready to take control of your finances?",
+  subtext: "Join 50,000+ users who trust FinTrack for smarter money management.",
+  buttonText: "Get Started for Free",
+};
