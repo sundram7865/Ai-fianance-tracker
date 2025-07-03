@@ -11,14 +11,14 @@ const Header = async () => {
 
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="container mx-auto px-4  flex items-center justify-between">
         <Link href="/">
   <Image
     src={"/fintrack.png"}
     alt="FinTrack Logo"
-    width={240}           // Increased width
-    height={72}           // Increased height
-    className="h-16 w-auto object-contain px-5"  // Increased height from h-12 to h-16
+    width={1000}           // Increased width
+    height={200}           // Increased height
+    className="h-24 w-auto object-contain px-5"  // Increased height from h-12 to h-16
   />
 </Link>
 
