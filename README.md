@@ -41,7 +41,7 @@ A full-stack, AI-powered personal finance dashboard to track expenses, manage tr
 ## 🌐 Live Demo
 
 * **Frontend**: [https://fintrack.vercel.app](https://ai-fianance-tracker.vercel.app)
-* **GitHub**: [https://github.com/sundram7865/fintrack](https://github.com/sundram7865/fintrack)
+* **GitHub**: [https://github.com/sundram7865/fintrack](https://github.com/sundram7865/Ai-fianance-tracker)
 
 ---
 
