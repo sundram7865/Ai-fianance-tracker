@@ -40,7 +40,7 @@ A full-stack, AI-powered personal finance dashboard to track expenses, manage tr
 
 ## 🌐 Live Demo
 
-* **Frontend**: [https://fintrack.vercel.app](https://fintrack.vercel.app)
+* **Frontend**: [https://fintrack.vercel.app](https://ai-fianance-tracker.vercel.app)
 * **GitHub**: [https://github.com/sundram7865/fintrack](https://github.com/sundram7865/fintrack)
 
 ---
@@ -63,7 +63,7 @@ A full-stack, AI-powered personal finance dashboard to track expenses, manage tr
 
 ```bash
 git clone https://github.com/sundram7865/fintrack.git
-cd fintrack
+cd ai-finance-platform-main
 ```
 
 ---
@@ -81,11 +81,21 @@ npm install
 Create a `.env.local` file:
 
 ```env
-DATABASE_URL=postgresql://USER:PASSWORD@localhost:5432/fintrack
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_pub_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_key
-RESEND_API_KEY=your_resend_key
+DATABASE_URL=
+DIRECT_URL=
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+
+GEMINI_API_KEY=
+
+RESEND_API_KEY=
+
+ARCJET_KEY=
 ```
 
 ---
