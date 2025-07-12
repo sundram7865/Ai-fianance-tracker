@@ -1,6 +1,6 @@
 # 💸 FinTrack – Personal Finance AI Dashboard
 
-![FinTrack Banner](https://your-image-url.com/banner.png)
+![FinTrack Banner](./public/banner.png)
 
 A full-stack, AI-powered personal finance dashboard to track expenses, manage transactions, visualize trends, and gain financial insights with the power of **Gemini AI**.
 
