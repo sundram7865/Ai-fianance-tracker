@@ -2,7 +2,7 @@
 
 FinTrack is a sleek, AI-assisted personal finance visualization platform built using modern web technologies. It helps users keep track of transactions, visualize spending patterns, and make data-driven decisions.
 
-![FinTrack Logo](./public/logo.png)
+![FinTrack Logo](./public/fintrack.png)
 
 ---
 
